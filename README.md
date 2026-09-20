@@ -44,14 +44,19 @@ On screen, box color tells you the status at a glance: **green** = recognized, *
 
 ```
 FaceTrace/
-├── main.py                  # entry point, camera loop, keyboard controls
-├── config.py                 # all tunable settings in one place
-├── database.py                # SQLite layer (persons + embeddings)
-├── face_engine.py            # InsightFace wrapper + Ball Tree search
-├── recognition_manager.py    # ties detection, matching, and registration together
-├── ui_manager.py              # all the OpenCV drawing/overlay code
-├── schema.sql                 # database schema
-└── data/                       # created on first run, holds faces.db (gitignored)
+├── Source/
+│   ├── main.py                  # entry point, camera loop, keyboard controls
+│   ├── config.py                 # all tunable settings in one place
+│   ├── database.py                # SQLite layer (persons + embeddings)
+│   ├── face_engine.py            # InsightFace wrapper + Ball Tree search
+│   ├── recognition_manager.py    # ties detection, matching, and registration together
+│   ├── ui_manager.py              # all the OpenCV drawing/overlay code
+│   ├── schema.sql                 # database schema
+│   └── data/                       # created on first run, holds faces.db (gitignored)
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## Getting started
@@ -62,6 +67,7 @@ cd FaceTrace
 python -m venv venv
 source venv/bin/activate      # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+cd Source
 python main.py
 ```
 
