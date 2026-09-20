@@ -1,0 +1,23 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Face database (contains real registered faces — never commit this)
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# InsightFace model cache (auto-downloaded, no need to track)
+.insightface/
+
+# Editor/OS clutter
+.vscode/
+.idea/
+.DS_Store
